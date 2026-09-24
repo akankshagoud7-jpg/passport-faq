@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PassportSuvidha FAQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: #F8FAFC;
+    color: #243B53;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .faq-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 64px 24px;
+  }
+
+  .faq-heading {
+    text-align: center;
+    margin-bottom: 34px;
+  }
+
+  .faq-heading h2 {
+    margin: 0 0 10px;
+    color: #102A43;
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+  }
+
+  .faq-heading p {
+    margin: 0;
+    color: #627D98;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .faq-item {
+    background: #FFFFFF;
+    border: 1px solid #D9E2EC;
+    border-radius: 11px;
+    overflow: hidden;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+
+  .faq-item.open {
+    border-color: #B8C9D9;
+    box-shadow: 0 4px 16px rgba(16, 42, 67, 0.06);
+  }
+
+  .faq-question {
+    width: 100%;
+    min-height: 68px;
+    border: 0;
+    background: transparent;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    color: #243B53;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .faq-question:hover {
+    background: #FBFCFE;
+  }
+
+  .faq-icon {
+    flex: 0 0 auto;
+    width: 22px;
+    height: 22px;
+    position: relative;
+  }
+
+  .faq-icon::before,
+  .faq-icon::after {
+    content: "";
+    position: absolute;
+    background: #486581;
+    border-radius: 2px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform .2s ease, opacity .2s ease;
+  }
+
+  .faq-icon::before {
+    width: 14px;
+    height: 2px;
+  }
+
+  .faq-icon::after {
+    width: 2px;
+    height: 14px;
+  }
+
+  .faq-item.open .faq-icon::after {
+    opacity: 0;
+    transform: translate(-50%, -50%) scaleY(0);
+  }
+
+  .faq-answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .25s ease;
+  }
+
+  .faq-answer-inner {
+    min-height: 0;
+    overflow: hidden;
+    color: #627D98;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .faq-answer-inner p {
+    margin: 0;
+    padding: 0 24px 22px;
+  }
+
+  .faq-item.open .faq-answer {
+    grid-template-rows: 1fr;
+  }
+
+  @media (max-width: 600px) {
+    .faq-section {
+      padding: 42px 20px;
+    }
+
+    .faq-heading {
+      margin-bottom: 24px;
+    }
+
+    .faq-heading h2 {
+      font-size: 28px;
+    }
+
+    .faq-heading p {
+      font-size: 14px;
+    }
+
+    .faq-question {
+      min-height: 64px;
+      padding: 17px 18px;
+      font-size: 14px;
+      gap: 12px;
+    }
+
+    .faq-answer-inner p {
+      padding: 0 18px 19px;
+      font-size: 13px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<section class="faq-section" aria-label="Frequently Asked Questions">
+  <div class="faq-heading">
+    <h2>Frequently Asked Questions</h2>
+    <p>Find quick answers to common passport assistance questions.</p>
+  </div>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-question" type="button" aria-expanded="false">
+        <span>How do I apply for a new passport?</span>
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>We guide you through the passport application process, including the required documents, application steps and appointment process.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" type="button" aria-expanded="false">
+        <span>What documents are required for a passport?</span>
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>The documents required depend on your application type and individual circumstances. Our team can help you identify the documents relevant to your application.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" type="button" aria-expanded="false">
+        <span>How long does the passport process take?</span>
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>Processing time depends on the application type, appointment availability and verification process.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" type="button" aria-expanded="false">
+        <span>Can you help with passport reissue?</span>
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>Yes. We provide assistance with the passport reissue process and help you understand the required documents and application steps.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" type="button" aria-expanded="false">
+        <span>Do you provide Tatkal passport assistance?</span>
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>Yes. We can guide you through the applicable Tatkal passport application process and documentation requirements.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" type="button" aria-expanded="false">
+        <span>Can you help with Police Clearance Certificate (PCC)?</span>
+        <span class="faq-icon" aria-hidden="true"></span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          <p>Yes. We provide guidance for the PCC application process and help you understand the required steps and documents.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const items = document.querySelectorAll(".faq-item");
+
+  items.forEach(item => {
+    const button = item.querySelector(".faq-question");
+
+    button.addEventListener("click", () => {
+      const isOpen = item.classList.contains("open");
+
+      // Close all other questions
+      items.forEach(otherItem => {
+        otherItem.classList.remove("open");
+        otherItem.querySelector(".faq-question").setAttribute("aria-expanded", "false");
+      });
+
+      // Open the clicked question if it was closed
+      if (!isOpen) {
+        item.classList.add("open");
+        button.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
